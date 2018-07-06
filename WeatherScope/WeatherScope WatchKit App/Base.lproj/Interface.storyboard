@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WeatherScope_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView alignment="center" image="SunnyImage" animationDuration="1" id="u6J-ZM-cvz"/>
+                        <group width="1" height="0.0" alignment="left" verticalAlignment="center" layout="vertical" id="kOk-JT-NAr">
+                            <items>
+                                <label alignment="center" text="32 ºC" textAlignment="center" id="DZy-x8-xtq">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="32"/>
+                                </label>
+                                <group width="1" alignment="center" id="WHa-dU-vef">
+                                    <items>
+                                        <label alignment="center" text="Lima," id="jnd-8t-S0O"/>
+                                        <label alignment="center" text="9 AM" id="H7k-Kt-xfc"/>
+                                    </items>
+                                </group>
+                            </items>
+                            <gestureRecognizers>
+                                <swipeGestureRecognizer delaysTouchesBegan="YES" direction="2" id="nDA-E9-Y9O">
+                                    <connections>
+                                        <action selector="swipeLeftAction:" destination="AgC-eL-Hgc" id="Lho-fK-L16"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                                <swipeGestureRecognizer delaysTouchesBegan="YES" id="5YT-0j-Q4q">
+                                    <connections>
+                                        <action selector="swipeRightAction:" destination="AgC-eL-Hgc" id="dPr-jz-d0X"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                            </gestureRecognizers>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </group>
+                        <button alignment="center" verticalAlignment="bottom" title="Go to the Phone" id="swd-ne-Sxj"/>
+                    </items>
+                    <connections>
+                        <outlet property="temperatureLabel" destination="DZy-x8-xtq" id="8tu-tN-kFY"/>
+                        <outlet property="timeLabel" destination="H7k-Kt-xfc" id="A6D-ZX-4sA"/>
+                        <outlet property="weatherIcon" destination="u6J-ZM-cvz" id="ewV-Wp-Mje"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Zx9-Ma-pcA">
+            <objects>
+                <controller id="fiC-6t-OWr"/>
+            </objects>
+            <point key="canvasLocation" x="-230" y="119"/>
+        </scene>
+    </scenes>
+</document>
